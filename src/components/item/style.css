@@ -1,0 +1,37 @@
+.Item {
+  display: flex;
+  justify-content: flex-start;
+  transition: background-color 1s;
+}
+
+.Item_selected {
+  background: #75aaf1;
+  color: #fff;
+}
+
+.Item-code {
+  padding: 20px 10px 20px 20px;
+}
+
+.Item-title {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.Item-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 20px 10px;
+}
+
+.PriceContaner {
+  display: flex;
+  justify-content: end;
+  justify-self: end;
+  width: 200px;
+}
+
+.Price {
+  align-self: center;
+  margin-right: 15px;
+}
