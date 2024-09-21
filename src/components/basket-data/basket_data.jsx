@@ -14,7 +14,7 @@ const BasketDataCounts = ({ productCount, store }) => {
           })}`
           : ''}
       </div>
-      <div className="BasketData">
+      <div className="BasketDataPrice">
         / {store.state.allPrice} ₽
       </div>
     </>

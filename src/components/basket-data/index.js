@@ -18,7 +18,7 @@ const BasketData = ({ store, onAllPrice, onChangeBasketMode }) => {
         {productCount ? (
           <BasketDataCounts store={store} productCount={productCount} />
         ) : (
-          <div>Пусто</div>
+          <div className="Pusto">Пусто</div>
         )}
         <button className="BasketButton" onClick={onChangeBasketMode}>Перейти</button>
       </div>
