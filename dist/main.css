@@ -1,0 +1,141 @@
+.Item {
+  display: flex;
+  justify-content: flex-start;
+  transition: background-color 1s;
+}
+
+.Item_selected {
+  background: #75aaf1;
+  color: #fff;
+}
+
+.Item-code {
+  padding: 20px 10px 20px 20px;
+}
+
+.Item-title {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.Item-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 20px 10px;
+}
+
+.PriceContaner {
+  display: flex;
+  justify-content: end;
+  justify-self: end;
+  width: 200px;
+}
+
+.Price {
+  align-self: center;
+  margin-right: 15px;
+}
+
+.List {
+}
+
+.List-item {
+  border-bottom: 1px dashed #ccc;
+}
+
+.Head {
+  height: 80px;
+  background: #f5f5f5;
+}
+
+.Head h1 {
+  margin: 0;
+  padding: 20px 20px 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #535353;
+  font-family: sans-serif;
+}
+
+.PageLayout {
+  max-width: 1024px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px 5px #0000003b;
+}
+
+
+.BasketCont {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Basket {
+  height: 380px;
+  width: 940px;
+  background: white;
+
+  font-weight: 700;
+  font-size: 32px;
+
+  padding: 20px;
+}
+
+.BasketClose {
+  position: absolute;
+}
+
+.BasketHeader {
+  position: absolute;
+  background: #cccccc;
+  width: 940px;
+}
+
+.BasketList {
+  position: absolute;
+  width: 940px;
+  height: 60px;
+color: black;
+}
+
+.Contaner {
+  display: flex;
+  justify-content: flex-end; /* Выровнять все содержимое по правому краю */
+  width: 100%;
+}
+
+.BasketDataContaner {
+  display: grid;
+  grid-template-columns: auto auto auto; /* Три колонки: "В корзине", количество/цена, кнопка */
+  align-items: center;
+  gap: 10px; /* Отступ между элементами */
+  width: auto; /* Позволяет контейнеру занимать необходимую ширину */
+  height: 50px;
+}
+
+.InBasket {
+  font-weight: normal; /* Обычный шрифт для "В корзине" */
+}
+
+.BasketData {
+  font-weight: 700; /* Жирный шрифт для количества и цены */
+}
+
+.BasketButton {
+  height: 20px;
+  width: 80px;
+  margin-left: 10px; /* Отступ слева для кнопки */
+}
+
