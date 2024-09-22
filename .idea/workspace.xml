@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7d06a53-9101-40b3-953d-60fc45203f90" name="Changes" comment="" />
+    <list default="true" id="f7d06a53-9101-40b3-953d-60fc45203f90" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/head/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/head/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page-layout/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page-layout/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -24,7 +37,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/partfolio/DZ-3/react-webinar-3-lecture-2/src/components",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/partfolio/react-webinar-3-lecture-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +70,10 @@
       <updated>1726562413401</updated>
       <workItem from="1726562415303" duration="587000" />
       <workItem from="1726575182854" duration="37498000" />
+      <workItem from="1726995021283" duration="69000" />
+      <workItem from="1726995116466" duration="25000" />
+      <workItem from="1726996202307" duration="15000" />
+      <workItem from="1726996426312" duration="1324000" />
     </task>
     <servers />
   </component>
