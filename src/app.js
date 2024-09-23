@@ -1,8 +1,11 @@
 import React, { useCallback } from 'react';
 import List from './components/list';
-import Controls from './components/controls';
 import Head from './components/head';
 import PageLayout from './components/page-layout';
+import Basket from "./components/basket/index.jsx";
+import BasketData from "./components/basket-data/index.js";
+import Controls from './components/controls';
+
 
 /**
  * Приложение
@@ -19,28 +22,35 @@ function App({ store }) {
       },
       [store],
     ),
-
-    onSelectItem: useCallback(
-      code => {
-        store.selectItem(code);
-      },
-      [store],
-    ),
-
     onAddItem: useCallback(() => {
       store.addItem();
     }, [store]),
+
+    onAddProduct: useCallback((title, code, price) =>{
+      store.addProduct(title, code, price)
+    }, [store]),
+
+    onAllPrice: useCallback(() => {
+      store.setAllPrice()
+    }, [store]),
+
+    onChangeBasketMode: useCallback(() => {
+      store.changeBasketMode()
+    }, [store]),
   };
+
 
   return (
     <PageLayout>
-      <Head title="Приложение на чистом JS" />
-      <Controls onAdd={callbacks.onAddItem} />
+      <Head store={store} title="Магазин"/>
+      <BasketData onChangeBasketMode={callbacks.onChangeBasketMode} onAllPrice={callbacks.onAllPrice} store={store}/>
       <List
         list={list}
+        onAllPrice={callbacks.onAllPrice}
         onDeleteItem={callbacks.onDeleteItem}
-        onSelectItem={callbacks.onSelectItem}
+        addProduct={callbacks.onAddProduct}
       />
+      {store.state.basketMode ? <Basket onChangeBasketMode={callbacks.onChangeBasketMode} onDeleteItem={callbacks.onDeleteItem} store={store}/> : null}
     </PageLayout>
   );
 }

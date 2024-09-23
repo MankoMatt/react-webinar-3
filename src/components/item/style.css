@@ -20,6 +20,18 @@
 
 .Item-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 20px 20px 20px 10px;
+}
+
+.PriceContaner {
+  display: flex;
+  justify-content: end;
+  justify-self: end;
+  width: 200px;
+}
+
+.Price {
+  align-self: center;
+  margin-right: 15px;
 }

@@ -1,0 +1,43 @@
+.Contaner {
+  display: flex;
+  justify-content: flex-end; /* Выровнять все содержимое по правому краю */
+  width: 100%;
+}
+
+.BasketDataContaner {
+  display: grid;
+  grid-template-areas: "I T N B";
+  /*grid-template-columns: 1fr 1fr 1fr; !* Три колонки: "В корзине", количество/цена, кнопка *!*/
+  align-items: center;
+  gap: 10px; /* Отступ между элементами */
+  width: auto; /* Позволwяет контейнеру занимать необходимую ширину */
+  height: 50px;
+  margin-right: 20px;
+}
+
+.InBasket {
+  grid-area: I;
+  font-weight: normal; /* Обычный шрифт для "В корзине" */
+}
+
+.BasketData {
+  grid-area: T;
+  font-weight: 700; /* Жирный шрифт для количества и цены */
+}
+
+.BasketButton {
+  grid-area: B;
+  height: 20px;
+  width: 80px;
+  margin-left: 10px; /* Отступ слева для кнопки */
+}
+
+.BasketDataPrice {
+  grid-area: N;
+  font-weight: 700; /* Жирный шрифт для количества и цены */
+
+}
+
+.Pusto {
+  font-weight: 700;
+}

@@ -1,5 +1,4 @@
-import { generateCode } from './utils';
-
+import {generateCode} from './utils';
 /**
  * Хранилище состояния приложения
  */
@@ -46,8 +45,60 @@ class Store {
   addItem() {
     this.setState({
       ...this.state,
-      list: [...this.state.list, { code: generateCode(), title: 'Новая запись' }],
+
+      list: [...this.state.list, {code: generateCode(), title: 'Новая запись'}],
     });
+  }
+
+  changeBasketMode() {
+    this.setState({
+      ...this.state,
+      basketMode: !this.state.basketMode
+    })
+  }
+
+  addProduct(title, code, price) {
+    const products = this.state.products || [];
+    const productIndex = products.findIndex(product => product.code === code);
+
+    if (productIndex > -1) {
+      products[productIndex].quantity += 1;
+    } else {
+      products.push({ title: title, code: code, quantity: 1, price: price });
+    }
+
+
+
+    this.setState({
+      ...this.state,
+      products: products
+    });
+    this.setAllPrice()
+  }
+
+  setAllPrice() {
+
+    if (Array.isArray(this.state.products)) {
+      let allPrice = 0;
+
+      for (let i = 0; i < this.state.products.length; i++) {
+        const product = this.state.products[i];
+
+        if (product.price && product.quantity) {
+          const one = product.price * product.quantity;
+          allPrice += one;
+          console.log(allPrice)
+        }
+      }
+      this.setState({
+        ...this.state,
+        allPrice: allPrice
+      })
+    } else if(typeof this.state.products === 'undefined') {
+      this.setState ({
+        ...this.state
+      })
+    }
   }
 
   /**
@@ -55,34 +106,16 @@ class Store {
    * @param code
    */
   deleteItem(code) {
-    this.setState({
-      ...this.state,
-      // Новый список, в котором не будет удаляемой записи
-      list: this.state.list.filter(item => item.code !== code),
-    });
-  }
 
-  /**
-   * Выделение записи по коду
-   * @param code
-   */
-  selectItem(code) {
+    const updatedProducts = this.state.products.filter(product => product.code !== code);
+    debugger
     this.setState({
       ...this.state,
-      list: this.state.list.map(item => {
-        if (item.code === code) {
-          // Смена выделения и подсчёт
-          return {
-            ...item,
-            selected: !item.selected,
-            count: item.selected ? item.count : item.count + 1 || 1,
-          };
-        }
-        // Сброс выделения если выделена
-        return item.selected ? { ...item, selected: false } : item;
-      }),
-    });
+      products: updatedProducts,
+    })
+    this.setAllPrice();
   }
 }
 
 export default Store;
+
