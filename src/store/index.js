@@ -10,9 +10,13 @@ class Store {
     /** @type {{
      * basket: Basket,
      * catalog: Catalog,
+<<<<<<< HEAD
      * modals: Modals,
      * paginator: Paginator,
      * card: Card
+=======
+     * modals: Modals
+>>>>>>> b5bf9380d97043e17bc3b5ea839ac797cd957969
      * }} */
     this.actions = {};
     for (const name of Object.keys(modules)) {

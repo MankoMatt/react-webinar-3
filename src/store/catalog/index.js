@@ -13,6 +13,7 @@ class Catalog extends StoreModule {
     };
   }
 
+<<<<<<< HEAD
   state = this.store.getState()
 
   async load(skip) {
@@ -20,11 +21,19 @@ class Catalog extends StoreModule {
     const json = await response.json();
     const maxPageCount = Math.ceil(json.result.count / 10)
 
+=======
+  async load() {
+    const response = await fetch('/api/v1/articles');
+    const json = await response.json();
+>>>>>>> b5bf9380d97043e17bc3b5ea839ac797cd957969
     this.setState(
       {
         ...this.getState(),
         list: json.result.items,
+<<<<<<< HEAD
         maxPageCount: maxPageCount
+=======
+>>>>>>> b5bf9380d97043e17bc3b5ea839ac797cd957969
       },
       'Загружены товары из АПИ',
     );
