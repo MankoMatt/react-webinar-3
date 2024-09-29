@@ -1,8 +1,6 @@
 export { default as basket } from './basket';
 export { default as catalog } from './catalog';
 export { default as modals } from './modals';
-<<<<<<< HEAD
 export {default as paginator} from './paginator'
 export {default as card} from './card'
-=======
->>>>>>> b5bf9380d97043e17bc3b5ea839ac797cd957969
+
