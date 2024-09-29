@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .Paginator-activePage {
   background: #4787ff;
   color: white;
@@ -62,20 +61,4 @@
   justify-content: end;
   align-items: center;
   user-select: none;
-=======
-/* Итого в корзине */
-.BasketTotal {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-}
-
-.BasketTotal-cell {
-  min-width: 85px;
-  text-align: right;
-  font-weight: bold;
-  font-size: 18px;
-  padding-left: 10px;
-  white-space: nowrap;
->>>>>>> b5bf9380d97043e17bc3b5ea839ac797cd957969
 }
