@@ -8,6 +8,7 @@ import useSelector from '../../store/use-selector';
 import Paginator from "../../components/paginator";
 import {Route, Routes} from "react-router-dom";
 import Card from "../../components/product-card";
+import React, {useEffect, useCallback} from "react"
 
 
 function Main() {
@@ -65,4 +66,4 @@ function Main() {
   );
 }
 
-export default memo(Main);
+export default React.memo(Main);
